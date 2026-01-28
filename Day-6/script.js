@@ -56,3 +56,4 @@ car.model="XUV700"
 Object.seal(car)
 car.color = "Black"; 
 console.log(car);
+//freeze vs seal - freeze me new key value pair add nahi kar sakte hai and na hi change kar sakte hai existing value pair ko , but in seal we can change or update the value pair but not add a new key value pair
