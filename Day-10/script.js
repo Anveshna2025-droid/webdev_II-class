@@ -1,43 +1,48 @@
-// Create a new element and set its content
+// console.log("hello world!");
+// we can create html element from javascript using create
+// new assignment will be started in the class now , event calander / tracker and dom manipulation bhi se hoga 
+//todo bhi banaenge 
+//create a new element and set its content
 const newParagraph = document.createElement("p");
-newParagraph.textContent = "This is a dynamically created paragraph.";
+newParagraph.textContent="this is a dynamically created paragraph";
 console.log(newParagraph);
 
-// Append the new element to the container
+//append the new element to the container
 const container = document.getElementById("container");
 container.appendChild(newParagraph);
+//target element by query selctor and then remove varna sab remove hojaega 
+//two ways to remove , one by creating const or else do it directly.
+// const rev = document.querySelector("#container p");
+// rev.remove();
 
-// remove Element
-//remove the first paragraph of container
+// or you can do this too 
 document.querySelector("#container p").remove();
 
 
+//creating a dynamic image tag in the page with javascript
+const image =document.createElement("img");
 
-const image = document.createElement("img");
+image.setAttribute("src","https://www.krmangalam.edu.in/wp-content/uploads/2024/02/140bs_The-Exquisite-Campus-Life-at-K.R.-Mangalam-University-768x3491-1.webp")
+image.setAttribute("alt","K.R Mangalam")
 
-image.setAttribute("src","https://www.krmangalam.edu.in/wp-content/uploads/2024/02/178bs_Best-Colleges-for-Master-in-Commerce-in-Gurgaon-768x431-1.webp");
-
-image.setAttribute("alt","K.R Mangalam");
-
-const gallery = document.getElementById("gallery");
+const gallery=document.getElementById("gallery");
 gallery.appendChild(image);
 
-
-// Date method
-
-let date = new Date()
+//Date method
+let date=new Date()
 console.log(date);
 
 setInterval(()=>{
-let date = new Date()
-console.log(date);
+    
+    let date=new Date()
+        console.log(date);   
 
-let hour = date.getHours();
-let min=date.getMinutes();
-let second= date.getSeconds();
+    let hour=date.getHours();
+    let min=date.getMinutes();
+    let second=date.getSeconds();
 
-let clock = document.getElementById("digi-clock");
+    letclock = document.getElementById("digiclock");
 
-clock.textContent=`${hour} : ${min} : ${second}`
+    clock.textContent='${hour} : ${min} : ${second}'
 
-},1000)
+    },1000)
