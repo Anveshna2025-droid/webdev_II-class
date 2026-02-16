@@ -23,6 +23,7 @@
 console.log("start....");
 function login(uname,password,cb){
     setTimeout(()=>{
+        cb({uname:uname, isLoggedIn:true,Message: "Login Successfull"});
     },1000);
 }
 function getVideoList(email,cb){
