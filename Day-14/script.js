@@ -27,10 +27,23 @@
 //     console.log(robj);
 //     console.log(robj.json());
 // })
-fetch("https://jsonplaceholder.typicode.com/todos/1")
-.then((robj)=>{
-    robj.json().then((data)=>{
-        console.log(data);
-    });
+// fetch("https://jsonplaceholder.typicode.com/todos/1")
+// .then((robj)=>{
+//     robj.json().then((data)=>{
+//         console.log(data);
+//     });
    
+// })
+
+
+fetch("https://jsonplaceholder.typicode.com/todos/1")
+.then(robj=>{
+    return robj.json();
 })
+.then(data=>{
+        console.log(data);
+    })
+    .catch(err=>{
+        console.log(err);
+    })
+   
